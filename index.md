@@ -1,37 +1,107 @@
-## Welcome to William Phenicie's Website
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>HomePage</title>
+    <link rel="stylesheet" href="Agenda.js">
+    <link href="HomePage.css" type="text/css" rel="stylesheet">
+</head>
 
-You can use the [editor on GitHub](https://github.com/WillPhen/WilliamPhenicie.github.io/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+<html>
+<body>
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+ <!-- //Top header ---------------------- -->
+<h1>HomePage</h1>
+<hr>
+    
+    <div class="container">
+        <div class="navWrapper">
+            <div class="leftHeader">
+                <div class="navLink active-nav-link">
+                    <a href="HomePage.html">Home</a>
+                </div>
+                <div class="navLink">
+                    <a href="About.html" id="about">About Me</a>
+                </div>
 
-### Markdown
+            </div>
+            
+            <div class="rightHeader">
+                <div class="navLink">
+                    <a href="myInfo.html">William Phenicie</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+    <div class="content-Wrapper">
+        <div class="portfolio-items-wrapper">
 
-```markdown
-Syntax highlighted code block
+            <div class="portfolio-item-wrapper">
+                <div class="resume">
+                    <div class="portfolio-img" style="background-image: url(images/resume.jpg);"></div>
+                </div>
 
-# Header 1
-## Header 2
-### Header 3
+                <div class="img-text-wrapper">
 
-- Bulleted
-- List
+                    <div class="subtitle" onclick="resumeClick()">Resume</div>
+                </div>
+            </div>
 
-1. Numbered
-2. List
+            <div class="portfolio-item-wrapper">
+                <div class="projects">
+                    <div class="portfolio-img" style="background-image: url(images/projects.jpg);"></div>
+                </div>
 
-**Bold** and _Italic_ and `Code` text
+                <div class="img-text-wrapper">
 
-[Link](url) and ![Image](src)
-```
+                    <div class="subtitle" onclick="projectsClick()">Projects</div>
+                </div>
+            </div>
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+        </div>
+    </div>
 
-### Jekyll Themes
+    <div class="getResume">
+        <a href="Resume.html" target="_blank" rel="noopener noreferrer"></a>
+    </div>
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/WillPhen/WilliamPhenicie.github.io/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+    <!-- //Footer ------------------------------------ -->
 
-### Support or Contact
+    <footer>Will Phenicie, CIS-3623, Spring 2021, <a href="mailto:willphen4141@gmail.com">Email me here</a>, <a href="https://www.okbu.edu/">OBU Website</a> </footer>
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+</body>
+
+<script>
+    const portfolioItems = document.querySelectorAll('.portfolio-item-wrapper')
+    const resumeImg = document.querySelector('.resume')
+    const projectsImg = document.querySelector('.projects')
+
+    var resume = document.getElementById("resume")
+    var projects = document.getElementById("projects")
+
+    function resumeClick() {
+        window.open("Resume.html")
+    }
+
+    function projectsClick() {
+        window.open("Personal Interest Page.html")
+    }
+
+
+
+    portfolioItems.forEach(portfolioItems => {
+        portfolioItems.addEventListener('mouseover', () => {
+            portfolioItems.childNodes[1].classList.add('img-darken')
+        })
+
+        portfolioItems.addEventListener('mouseout', () => {
+            portfolioItems.childNodes[1].classList.remove('img-darken')
+        })
+    })
+    
+
+</script>
+</html>
