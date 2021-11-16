@@ -37,16 +37,16 @@
         <div class="two-column-wrapper">
             <div class="profile-image-wrapper">
                 <div class="img-wrapper">
-                    <img id="image" src="images/computer.jpg">
+                        <img id="image" src="images/computer.jpg">
                 </div>
-                <div class="image-txt-wrapper">
-                    <div class="subtitle">There She Is!</div>
+                <div class="txtImg-wrapper">
+                        <div class="subtitle">There She Is!</div>
                 </div>
             </div>
 
                 <div class="profile-content-wrapper">
                     <h1>A little about my Computer:</h1>
-                    <p>I built this computer during the summer of my job with the City of Tulsa. I gained so much amazing experience there, not just software but also hardware. This experience allowed me to built this amazing desktop. If you're interested the main specs of this computer
+                    <p>I built this computer during the summer of my job with the City of Tulsa. I gained so much amazing experience there, not just software but also hardware. This experience allowed me to built this amazing desktop. If you're interested, the main specs of this computer
                         are:
                         <ul>
                             <li>CPU: AMD Ryzen 5 5600x</li>
@@ -72,11 +72,11 @@
 
     profileImage.forEach(profileImage => {
         profileImage.addEventListener('mouseover', () => {
-            profileImage.childNodes[1].classList.add('img-darken')
+            profileImage.childNodes[1].classList.add('computer-img-darken')
         })
 
         profileImage.addEventListener('mouseout', () => {
-            profileImage.childNodes[1].classList.remove('img-darken')
+            profileImage.childNodes[1].classList.remove('computer-img-darken')
         })
     })
     

@@ -1,3 +1,4 @@
 ## Welcome to William Phenicie's Website
-Go to my homepage to find out more info:
+I created my website completely with html, javascript, and css!
+Check it out to find out more info about me:
 <a href="HomePage.html">Home</a>

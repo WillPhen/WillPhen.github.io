@@ -4,14 +4,14 @@ h1 {
 }
 
 footer {
-    position: absolute;
+    position: static;
     bottom: 0;
     height: 20px;
     width: 100%;
     color: seagreen;
     font-size: larger;
     text-align: center;
-    
+    margin-top: 10%;
   }
 
   footer a{
@@ -134,6 +134,11 @@ footer {
     filter: brightness(30%);
 }
 
+.computer-img-darken{
+    transition: 1s;
+    filter: brightness(60%);
+}
+
 /* About Page*/
 .two-column-wrapper{
     display: grid;
@@ -167,11 +172,14 @@ footer {
     color: lightseagreen;
 }
 
+.txtImg-wrapper .subtitle{
+    margin-top: 15%;
+}
+
 
 /* Resume */
 .resumeWrapper{
     margin-left: 5%;
-    margin-right: 5%;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
@@ -189,18 +197,24 @@ h2{
 }
 
 .COT-picture-wrapper{
-    margin-top: 30%;
+    margin-top: 40%;
+}
+
+.obu-picture-wrapper{
+    margin-top: 50%;
+}
+
+.repeat-picture-wrapper{
+    margin-top: 60%;
 }
 
 /* Workout Project */
 .workout-container h3{
-    margin: 16px 0;
     border-left: 5px solid lightseagreen;
     padding-left: 16px;
 }
 
 .workout-container{
-    padding: 48px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -222,7 +236,7 @@ label{
 
 label::before{
     content: "";
-    background: url(check.jpg);
+    background: url(images\check.jpg);
     background-position: center;
     background-size: contain;
     width: 28px;
