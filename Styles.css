@@ -11,6 +11,7 @@ footer {
     color: seagreen;
     font-size: larger;
     text-align: center;
+    
   }
 
   footer a{
@@ -170,7 +171,7 @@ footer {
 /* Resume */
 .resumeWrapper{
     margin-left: 5%;
-    margin-right: 60%;
+    margin-right: 5%;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
@@ -185,4 +186,8 @@ h2{
 
 .projects a{
     color: lightseagreen;
+}
+
+.COT-picture-wrapper{
+    margin-top: 30%;
 }
