@@ -3,7 +3,7 @@ var upperChest = ["Incline Bench", "Incline DB Bench", "Upper Chest Cable"]
 var lowerChest = ["Decline Bench", "Decline DB Bench", "Lower Chest Cable"]
 var chest = ["Bench", "Machine Bench", "DB Bench"]
 
-var tris = ["Cable Pulldowns", "Ski Flies", "Overhead Cable Pulls"]
+var tris = ["Cable Pulldowns", "Ski Flies", "Overhead Cable Pulls", "Tricep Machine", "Single Hand Cable Pulldowns", "Tricep Dips"]
 
 var back = ["Machine Row", "Straight Bar Pulldown"]
 var latBack = ["Cable Pulldown", "One Hand Machine Rows"]
@@ -38,98 +38,70 @@ var forearmsClick = document.getElementById("fore")
 
 var submit = document.getElementById("create-btn")
 
-submit.addEventListener("click", openWorkout, false)
+//duplicate checker
+//print videos of workouts with each workout
+submit.addEventListener("click", function() {
+    //window.open("WorkoutPage.html") 
 
- function openWorkout() {
-     //why cant I do "_self" ??
-     window.open("WorkoutPage.html")
- }
-
- var display_workout = document.getElementsByClassName("created-workout-wrapper")
-
- function buttonPressed() {
-    var submit = document.getElementById("create-btn")
-    submit.buttonPressed = true
- }
-
-//do I need this function?
-//how do I call this on to workout page?
-//make duplicate checker
-
-chestClick.addEventListener("change", function(){
-    if(chestClick.checked && buttonPressed) {
+    if(chestClick.checked) {
         document.writeln("<h2>Chest Exercises:</h2>")
         document.writeln("<p>Chest(Upper): " + upperChest[Math.floor(Math.random() * upperChest.length)] + "</p>")
         document.writeln("<p>Chest: " + chest[Math.floor(Math.random() * chest.length)] + "</p>")
         document.writeln("<p>Chest(Lower): " + lowerChest[Math.floor(Math.random() * lowerChest.length)] + "</p>")
         }
+
+        if(trisClick.checked) {
+            //var pulledValues = []
+                //first
+                document.writeln("<h2>Triceps Exercises:</h2>")
+                document.writeln("<p>Triceps: " + tris[Math.floor(Math.random() * tris.length)] + "</p>")
+                document.writeln("<p>Triceps: " + tris[Math.floor(Math.random() * tris.length)] + "</p>")
+                document.writeln("<p>Triceps: " + tris[Math.floor(Math.random() * tris.length)] + "</p>")
+        }
+
+        if(backClick.checked) {
+            document.writeln("<h2>Back Exercises:</h2>")
+            document.writeln("<p>Back: " + back[Math.floor(Math.random() * back.length)] + "</p>")
+            document.writeln("<p>Back: " + back[Math.floor(Math.random() * back.length)] + "</p>")
+            document.writeln("<p>Lats: " + latBack[Math.floor(Math.random() * latBack.length)] + "</p>")
+        }
+
+        if(bisClick.checked) {
+            document.writeln("<h2>Bicep Exercises:</h2>")
+            document.writeln("<p>Biceps(short head): " + shortBis[Math.floor(Math.random() * shortBis.length)] + "</p>")
+            document.writeln("<p>Biceps(long head): " + longBis[Math.floor(Math.random() * longBis.length)] + "</p>")
+            document.writeln("<p>Biceps(brachialis): " + brachBis[Math.floor(Math.random() * brachBis.length)] + "</p>")
+        }
+
+        if(shouldersClick.checked) {
+            document.writeln("<h2>Shoulder Exercises:</h2>")
+            document.writeln("<p>Shoulders: " + shoulders[Math.floor(Math.random() * shoulders.length)] + "</p>")
+            document.writeln("<p>Shoulders(Front): " + frontShoulders[Math.floor(Math.random() * frontShoulders.length)] + "</p>")
+            document.writeln("<p>Shoulders(Back): " + backShoulders[Math.floor(Math.random() * backShoulders.length)] + "</p>")
+            document.writeln("<p>Shoulders(Traps): " + trapsShoulders[Math.floor(Math.random() * trapsShoulders.length)] + "</p>")
+        }
+
+        if(legsClick.checked) {
+            document.writeln("<h2>Leg Exercises:</h2>")
+            document.writeln("<p>Legs: " + legs[Math.floor(Math.random() * legs.length)] + "</p>")
+            document.writeln("<p>Legs(Hamstrings): " + hamLegs[Math.floor(Math.random() * hamLegs.length)] + "</p>")
+            document.writeln("<p>Legs(Quadricips): " + quadLegs[Math.floor(Math.random() * quadLegs.length)] + "</p>")
+        }
+
+        if(absClick.checked) {
+            document.writeln("<h2>Ab Exercises:</h2>")
+            document.writeln("<p>Abs: " + abs[Math.floor(Math.random() * abs.length)] + "</p>")
+            document.writeln("<p>Abs: " + abs[Math.floor(Math.random() * abs.length)] + "</p>")
+            document.writeln("<p>Abs: " + abs[Math.floor(Math.random() * abs.length)] + "</p>")
+        }
+
+        if(forearmsClick.checked) {
+            document.writeln("<h2>Forearm Exercises:</h2>")
+            document.writeln("<p>Forearms(top): " + topForearms[Math.floor(Math.random() * topForearms.length)] + "</p>")
+            document.writeln("<p>Forearms(bottom): " + bottomForearms[Math.floor(Math.random() * bottomForearms.length)] + "</p>")
+        }
 })
 
 
-
-
-trisClick.addEventListener("change", function() {
-    if(this.checked) {
-        document.writeln("<h2>Triceps Exercises:</h2>")
-        document.writeln("<p>Triceps: " + tris[Math.floor(Math.random() * tris.length)] + "</p>")
-        document.writeln("<p>Triceps: " + tris[Math.floor(Math.random() * tris.length)] + "</p>")
-        document.writeln("<p>Triceps: " + tris[Math.floor(Math.random() * tris.length)] + "</p>")
-    }
-})
-
-
-backClick.addEventListener("change", function() {
-    if(this.checked) {
-        document.writeln("<h2>Back Exercises:</h2>")
-        document.writeln("<p>Back: " + back[Math.floor(Math.random() * back.length)] + "</p>")
-        document.writeln("<p>Back: " + back[Math.floor(Math.random() * back.length)] + "</p>")
-        document.writeln("<p>Lats: " + latBack[Math.floor(Math.random() * latBack.length)] + "</p>")
-    }
-})
-
-bisClick.addEventListener("change", function() {
-    if(this.checked) {
-        document.writeln("<h2>Bicep Exercises:</h2>")
-        document.writeln("<p>Biceps(short head): " + shortBis[Math.floor(Math.random() * shortBis.length)] + "</p>")
-        document.writeln("<p>Biceps(long head): " + longBis[Math.floor(Math.random() * longBis.length)] + "</p>")
-        document.writeln("<p>Biceps(brachialis): " + brachBis[Math.floor(Math.random() * brachBis.length)] + "</p>")
-    }
-})
-
-shouldersClick.addEventListener("change", function() {
-    if(this.checked) {
-        document.writeln("<h2>Shoulder Exercises:</h2>")
-        document.writeln("<p>Shoulders: " + shoulders[Math.floor(Math.random() * shoulders.length)] + "</p>")
-        document.writeln("<p>Shoulders(Front): " + frontShoulders[Math.floor(Math.random() * frontShoulders.length)] + "</p>")
-        document.writeln("<p>Shoulders(Back): " + backShoulders[Math.floor(Math.random() * backShoulders.length)] + "</p>")
-        document.writeln("<p>Shoulders(Traps): " + trapsShoulders[Math.floor(Math.random() * trapsShoulders.length)] + "</p>")
-    }
-})
-
-legsClick.addEventListener("change", function() {
-    if(this.checked) {
-        document.writeln("<h2>Leg Exercises:</h2>")
-        document.writeln("<p>Legs: " + legs[Math.floor(Math.random() * legs.length)] + "</p>")
-        document.writeln("<p>Legs(Hamstrings): " + hamLegs[Math.floor(Math.random() * hamLegs.length)] + "</p>")
-        document.writeln("<p>Legs(Quadricips): " + quadLegs[Math.floor(Math.random() * quadLegs.length)] + "</p>")
-    }
-})
-
-absClick.addEventListener("change", function() {
-    if(this.checked) {
-        document.writeln("<h2>Ab Exercises:</h2>")
-        document.writeln("<p>Abs: " + abs[Math.floor(Math.random() * abs.length)] + "</p>")
-        document.writeln("<p>Abs: " + abs[Math.floor(Math.random() * abs.length)] + "</p>")
-        document.writeln("<p>Abs: " + abs[Math.floor(Math.random() * abs.length)] + "</p>")
-    }
-})
-
-forearmsClick.addEventListener("change", function() {
-    if(this.checked) {
-        document.writeln("<h2>Forearm Exercises:</h2>")
-        document.writeln("<p>Forearms(top): " + topForearms[Math.floor(Math.random() * topForearms.length)] + "</p>")
-        document.writeln("<p>Forearms(bottom): " + bottomForearms[Math.floor(Math.random() * bottomForearms.length)] + "</p>")
-    }
-})
 
 
