@@ -1,6 +1,7 @@
+
 var upperChest = ["Incline Bench", "Incline DB Bench", "Upper Chest Cable"]
 var lowerChest = ["Decline Bench", "Decline DB Bench", "Lower Chest Cable"]
-var Chest = ["Bench", "Machine Bench", "DB Bench"]
+var chest = ["Bench", "Machine Bench", "DB Bench"]
 
 var tris = ["Cable Pulldowns", "Ski Flies", "Overhead Cable Pulls"]
 
@@ -25,16 +26,110 @@ var abs = ["Hanging Knee Raise", "Hanging Leg Raise", "Hold Ab Curls"]
 var topForearms = ["Reverse Grip Barbell Forearm Curl", "Reverse Grip Cable Forearm Curl"]
 var bottomForearms = ["Barbell Forearm Curl", "Cable Forearm Curl"]
 
-var chestClick = document.getElementById("chest")
-var trisClick = document.getElementById("chest")
-var backClick = document.getElementById("chest")
-var bisClick = document.getElementById("chest")
-var shouldersClick = document.getElementById("chest")
-var legsClick = document.getElementById("chest")
-var absClick = document.getElementById("chest")
-var forearmsClick = document.getElementById("chest")
 
-function randomize() {
-    document.writeln("Chest Exercises:")
-}
+var chestClick = document.getElementById("chest")
+var trisClick = document.getElementById("tris")
+var backClick = document.getElementById("back")
+var bisClick = document.getElementById("bis")
+var shouldersClick = document.getElementById("shoulders")
+var legsClick = document.getElementById("legs")
+var absClick = document.getElementById("abs")
+var forearmsClick = document.getElementById("fore")
+
+var submit = document.getElementById("create-btn")
+
+submit.addEventListener("click", openWorkout, false)
+
+ function openWorkout() {
+     //why cant I do "_self" ??
+     window.open("WorkoutPage.html")
+ }
+
+ var display_workout = document.getElementsByClassName("created-workout-wrapper")
+
+ function buttonPressed() {
+    var submit = document.getElementById("create-btn")
+    submit.buttonPressed = true
+ }
+
+//do I need this function?
+//how do I call this on to workout page?
+//make duplicate checker
+
+chestClick.addEventListener("change", function(){
+    if(chestClick.checked && buttonPressed) {
+        document.writeln("<h2>Chest Exercises:</h2>")
+        document.writeln("<p>Chest(Upper): " + upperChest[Math.floor(Math.random() * upperChest.length)] + "</p>")
+        document.writeln("<p>Chest: " + chest[Math.floor(Math.random() * chest.length)] + "</p>")
+        document.writeln("<p>Chest(Lower): " + lowerChest[Math.floor(Math.random() * lowerChest.length)] + "</p>")
+        }
+})
+
+
+
+
+trisClick.addEventListener("change", function() {
+    if(this.checked) {
+        document.writeln("<h2>Triceps Exercises:</h2>")
+        document.writeln("<p>Triceps: " + tris[Math.floor(Math.random() * tris.length)] + "</p>")
+        document.writeln("<p>Triceps: " + tris[Math.floor(Math.random() * tris.length)] + "</p>")
+        document.writeln("<p>Triceps: " + tris[Math.floor(Math.random() * tris.length)] + "</p>")
+    }
+})
+
+
+backClick.addEventListener("change", function() {
+    if(this.checked) {
+        document.writeln("<h2>Back Exercises:</h2>")
+        document.writeln("<p>Back: " + back[Math.floor(Math.random() * back.length)] + "</p>")
+        document.writeln("<p>Back: " + back[Math.floor(Math.random() * back.length)] + "</p>")
+        document.writeln("<p>Lats: " + latBack[Math.floor(Math.random() * latBack.length)] + "</p>")
+    }
+})
+
+bisClick.addEventListener("change", function() {
+    if(this.checked) {
+        document.writeln("<h2>Bicep Exercises:</h2>")
+        document.writeln("<p>Biceps(short head): " + shortBis[Math.floor(Math.random() * shortBis.length)] + "</p>")
+        document.writeln("<p>Biceps(long head): " + longBis[Math.floor(Math.random() * longBis.length)] + "</p>")
+        document.writeln("<p>Biceps(brachialis): " + brachBis[Math.floor(Math.random() * brachBis.length)] + "</p>")
+    }
+})
+
+shouldersClick.addEventListener("change", function() {
+    if(this.checked) {
+        document.writeln("<h2>Shoulder Exercises:</h2>")
+        document.writeln("<p>Shoulders: " + shoulders[Math.floor(Math.random() * shoulders.length)] + "</p>")
+        document.writeln("<p>Shoulders(Front): " + frontShoulders[Math.floor(Math.random() * frontShoulders.length)] + "</p>")
+        document.writeln("<p>Shoulders(Back): " + backShoulders[Math.floor(Math.random() * backShoulders.length)] + "</p>")
+        document.writeln("<p>Shoulders(Traps): " + trapsShoulders[Math.floor(Math.random() * trapsShoulders.length)] + "</p>")
+    }
+})
+
+legsClick.addEventListener("change", function() {
+    if(this.checked) {
+        document.writeln("<h2>Leg Exercises:</h2>")
+        document.writeln("<p>Legs: " + legs[Math.floor(Math.random() * legs.length)] + "</p>")
+        document.writeln("<p>Legs(Hamstrings): " + hamLegs[Math.floor(Math.random() * hamLegs.length)] + "</p>")
+        document.writeln("<p>Legs(Quadricips): " + quadLegs[Math.floor(Math.random() * quadLegs.length)] + "</p>")
+    }
+})
+
+absClick.addEventListener("change", function() {
+    if(this.checked) {
+        document.writeln("<h2>Ab Exercises:</h2>")
+        document.writeln("<p>Abs: " + abs[Math.floor(Math.random() * abs.length)] + "</p>")
+        document.writeln("<p>Abs: " + abs[Math.floor(Math.random() * abs.length)] + "</p>")
+        document.writeln("<p>Abs: " + abs[Math.floor(Math.random() * abs.length)] + "</p>")
+    }
+})
+
+forearmsClick.addEventListener("change", function() {
+    if(this.checked) {
+        document.writeln("<h2>Forearm Exercises:</h2>")
+        document.writeln("<p>Forearms(top): " + topForearms[Math.floor(Math.random() * topForearms.length)] + "</p>")
+        document.writeln("<p>Forearms(bottom): " + bottomForearms[Math.floor(Math.random() * bottomForearms.length)] + "</p>")
+    }
+})
+
 
