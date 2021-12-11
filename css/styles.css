@@ -200,14 +200,6 @@ h2{
     margin-top: 40%;
 }
 
-.obu-picture-wrapper{
-    margin-top: 50%;
-}
-
-.repeat-picture-wrapper{
-    margin-top: 60%;
-}
-
 /* Workout Project */
 .workout-container h3{
     border-left: 5px solid lightseagreen;
@@ -225,8 +217,6 @@ h2{
     padding: 8px 48px;
     margin: 8px;
 }
-
-/* ADD A CONTACT ME TAB THAT HAS EMAIL SUBJECT AND MESSAGE BOX*/
 
 /*
 input[type="checkbox"]{

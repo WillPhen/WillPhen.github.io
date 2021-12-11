@@ -39,7 +39,6 @@ var forearmsClick = document.getElementById("fore")
 var submit = document.getElementById("create-btn")
 
 submit.addEventListener("click", function() {
-    //window.open("WorkoutPage.html") 
 
     if(chestClick.checked) {
         document.writeln("<h2>Chest Exercises:</h2>")
