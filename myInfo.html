@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>My Info</title>
+    <link href="css/styles.css" type="text/css" rel="stylesheet">
+</head>
+
+<html>
+<body>
+
+ <!-- //Top header ---------------------- -->
+<h1>My Info</h1>
+<hr>
+    
+    <div class="container">
+        <div class="navWrapper">
+            <div class="leftHeader">
+                <div class="navLink">
+                    <a href="HomePage.html">Home</a>
+                </div>
+                <div class="navLink">
+                    <a href="About.html" id="about">About Me</a>
+                </div>
+
+            </div>
+            
+            <div class="rightHeader">
+                <div class="navLink active-nav-link">
+                    <a href="myInfo.html">William Phenicie</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Portfolio Pictures-->
+    <div class="content-Wrapper">
+        <div class="two-column-wrapper">
+                    <div class="profile-image-wrapper">
+                        <img src="images/myPicture.jpg">
+                    </div>
+
+                <div class="profile-content-wrapper">
+                    <h1>A little about me:</h1>
+                        <p>
+                            My name is Will Phenicie I grew up in Tulsa, Oklahoma. I plan on graduating in May of 2022 and then moving back to Tulsa to start my career.
+                            I am very passionate about computer science and am fascinated in learning everything I can about it. I tend to be very friendly, loyal, and helpful to my co-workers and I love to meet new people.
+                            I am so excited to land my next job in the computer science field and am ready to bring my experience to the table and exceed in whatever tasks are given to me.
+                        </p>
+                </div>
+
+        </div>
+    </div>
+
+    <!-- //Footer ------------------------------------ -->
+
+    <footer>Will Phenicie, CIS-3623, Spring 2021, <a href="mailto:willphen4141@gmail.com">Email me here</a>, <a href="https://www.okbu.edu/">OBU Website</a> </footer>
+
+</body>
+
+<script>
+    const portfolioItems = document.querySelectorAll('.portfolio-item-wrapper')
+
+    portfolioItems.forEach(portfolioItems => {
+        portfolioItems.addEventListener('mouseover', () => {
+            portfolioItems.childNodes[1].classList.add('img-darken')
+        })
+
+        portfolioItems.addEventListener('mouseout', () => {
+            portfolioItems.childNodes[1].classList.remove('img-darken')
+        })
+    })
+    
+
+</script>
+
+</html>
