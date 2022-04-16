@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>MultiStepForm</title>
+    <link href="css/styles.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="css/MultiStepForm.css">
+    <script src="javascript/MultiStepForm.js" defer></script>
+</head>
+
+<html>
+<body>
+
+ <!-- //Top header ---------------------- -->
+<h1>MultiStepForm</h1>
+<hr>
+    
+    <div class="container">
+        <div class="navWrapper">
+            <div class="leftHeader">
+                <div class="navLink active-nav-link">
+                    <a href="HomePage.html">Home</a>
+                </div>
+                <div class="navLink">
+                    <a href="About.html" id="about">About Me</a>
+                </div>
+
+            </div>
+            
+            <div class="rightHeader">
+                <div class="navLink">
+                    <a href="myInfo.html">William Phenicie</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <form data-multi-step class="multi-step-form">
+        <div class="card" data-step>
+          <h3 class="step-title">Create Account</h3>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" required name="email" id="email">
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone (optional)</label>
+            <input type="tel" name="phone" id="phone">
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" required name="password" id="password"> 
+          </div>
+          <input type="checkbox" onclick="showPass()">Show Password <br> <br>
+          <button type="button" data-next>Next</button>
+        </div>
+        <div class="card" data-step>
+          <h3 class="step-title">Social Media</h3>
+          <div class="form-group">
+            <label for="github">GitHub</label>
+            <input type="url" name="github" id="github">
+          </div>
+          <div class="form-group">
+            <label for="linkedin">LinkedIn</label>
+            <input type="url" name="linkedin" id="linkedin">
+          </div>
+          <div class="form-group">
+            <label for="website/portfolio">Personal Website/Portfolio</label>
+            <input type="url" name="website/portfolio" id="website/portfolio">
+          </div>
+          <button type="button" data-previous>Previous</button>
+          <button type="button" data-next>Next</button>
+        </div>
+        <div class="card" data-step>
+          <h3 class="step-title">Personal Info</h3>
+          <div class="form-group">
+            <label for="firstName">First Name</label>
+            <input type="text" required name="firstName" id="firstName">
+          </div>
+          <div class="form-group">
+            <label for="lastName">Last Name</label>
+            <input type="text" required name="lastName" id="lastName">
+          </div>
+          <div class="form-group">
+            <label for="city">City</label>
+            <input type="text" required name="city" id="city">
+          </div>
+          <div class="form-group">
+            <label for="state">State</label>
+            <input type="text" required name="state" id="state">
+          </div>
+          <div class="form-group">
+            <label for="zipcode">Zip Code</label>
+            <input type="text" required name="zipcode" id="zipcode">
+          </div>
+          <button type="button" data-previous>Previous</button>
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+
+
+    <script src="javascript/footer.js"></script>
+    
+</body>
+</html>

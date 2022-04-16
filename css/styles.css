@@ -8,14 +8,14 @@ footer {
     bottom: 0;
     height: 20px;
     width: 100%;
-    color: seagreen;
+    color: lightseagreen;
     font-size: larger;
     text-align: center;
     margin-top: 10%;
   }
 
   footer a{
-      color: seagreen;
+      color: lightseagreen;
   }
 
   .resumeFooter{
