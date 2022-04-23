@@ -1,4 +1,4 @@
 #WillPhen.github.io
 William Phenicie's Website
 
-This is my website to show some current projects I have been working on.
+Hello! Welcome to my website. This website shows a little about me and my skills as a programmer. It also show a few projects that I have been working on.
