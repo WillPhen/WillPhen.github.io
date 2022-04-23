@@ -1,4 +1,3 @@
 ## Welcome to William Phenicie's Website
-I created my website completely with html, javascript, and css!
-Check it out to find out more info about me:
+I created this website to showcase my skills as a programmer. It shows my resume, details about me, and some projects that I have worked on. Click this link to check it out:
 <a href="HomePage.html">Home</a>
